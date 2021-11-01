@@ -1,0 +1,113 @@
+<!-- 
+    main repo
+    https://github.com/rhonstratos/Web-Systems-and-Technologies
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ronald Dy Tioco Jr">
+    <meta name="description" content="Web Systems and Technologies | Activity 2">
+    <title>Activity 2</title> 
+    <style>
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 
+            'Trebuchet MS',sans-serif;
+        }
+        *{
+            font-size: x-large;
+        }
+        .d1{
+            text-align: center;
+            padding-top:3rem;
+            padding-bottom:5rem;
+        }
+        .d2{
+            border: 3px solid black;
+            display: inline-block;
+            text-align: left;
+            padding: 1rem;
+        }
+        #search-color{
+            width: 5em; text-align-last: center;
+        }
+        input[type=number]{width: 30%; text-align: center;}
+        form>div{
+            padding: 1em;
+        }
+    </style>
+    <script>
+        function updateCBX(){document.getElementById("color-picker").value = document.getElementById("search-color").value;}
+        function updateCX(){
+            var cx1 = document.getElementById("cx1");
+            var cx2 = document.getElementById("cx2");
+            var cx3 = document.getElementById("cx3");
+            var cx4 = document.getElementById("cx4");
+            var cpx = document.getElementById("color-picker");
+            if(cx1.checked == true){
+                cpx.value = cx1.value;
+            }
+            if(cx2.checked == true){
+                cpx.value = cx2.value;
+            }
+            if(cx3.checked == true){
+                cpx.value = cx3.value;
+            }
+            if(cx4.checked == true){
+                cpx.value = cx4.value;
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="d1">
+        <p>Output: <i>(Filled Out)</i>:</p>
+        <div class="d2">
+            <form action="#" id="main-form">
+                <div class="search combobox">
+                    <label for="combobox">Search on this page:</label>
+                    <select name="combobox" id="search-color" form="main-form"
+                    onchange="updateCBX()" onmousedown="">
+                        <option value="#0000FF">Blue</option>
+                        <option value="#808080">Gray</option>
+                        <option value="#ff0000">Red</option>
+                        <option value="#00FF00">Green</option>
+                    </select>
+                </div>
+                <div class="checkbox colors">
+                    <label for="checkbox">Choose the colors you like:</label><br>
+                    <input type="checkbox" onclick="updateCX()" id="cx1" value="#0000FF">
+                    <label for="cbx1">Blue</label><br>
+                    <input type="checkbox" onclick="updateCX()" id="cx2" value="#808080">
+                    <label for="cbx2">Gray</label><br>
+                    <input type="checkbox" onclick="updateCX()" id="cx3" value="#ff0000">
+                    <label for="cbx3">Red</label><br>
+                    <input type="checkbox" onclick="updateCX()" id="cx4" value="#00FF00">
+                    <label for="cbx4">Green</label>
+                </div>
+                <div class="color picker">
+                    <label for="color-picker">or select using color picker:</label>
+                    <br>
+                    <input type="color" name="color-picker" id="color-picker" value="#fff">
+                </div>
+                <div class="rate color">
+                    <label for="">Rate each color (5 being the highest):</label><br>
+                    <label>1</label><input type="range" min="1" max="5"><label>5 Blue</label><br>
+                    <label>1</label><input type="range" min="1" max="5"><label>5 Gray</label><br>
+                    <label>1</label><input type="range" min="1" max="5"><label>5 Red</label><br>
+                    <label>1</label><input type="range" min="1" max="5"><label>5 Green</label>
+                </div>
+                <div class="age">
+                    <label>What is your age? </label><input type="number" min="0" max="150">
+                </div>
+                <div style="text-align:center;padding-top:0;">
+                    <input type="submit"style="width:5rem;height:2rem;">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
