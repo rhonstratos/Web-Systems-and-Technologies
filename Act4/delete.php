@@ -1,3 +1,7 @@
+<!-- 
+    main repo
+    https://github.com/rhonstratos/Web-Systems-and-Technologies
+-->
 <?php
     session_start();
     include './config.php';

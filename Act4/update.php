@@ -1,3 +1,7 @@
+<!-- 
+    main repo
+    https://github.com/rhonstratos/Web-Systems-and-Technologies
+-->
 <?php
     if(session_id()!='')
         session_destroy();

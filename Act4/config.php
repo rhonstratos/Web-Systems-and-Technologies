@@ -1,3 +1,7 @@
+<!-- 
+    main repo
+    https://github.com/rhonstratos/Web-Systems-and-Technologies
+-->
 <?php 
     $_SESSION['dbtoast']=1;
     define('DB_SERVER', 'localhost');
